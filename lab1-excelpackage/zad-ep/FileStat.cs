@@ -1,12 +1,14 @@
-﻿namespace zad_ep;
+﻿using OfficeOpenXml.Drawing.Chart.ChartEx;
 
-public class FileStat : IComparable
+namespace zad_ep;
+
+public class FileStat
 {
-	public string namePath;
-	public long size;
-	
-	public int CompareTo(object? obj)
+	public class SorterBySize : IComparer<FileInfo>
 	{
-		throw new NotImplementedException();
+		public int Compare(FileInfo? x, FileInfo? y)
+		{
+			return (int)Math.Clamp(y.Length - x.Length, -1, 1);
+		}
 	}
 }
