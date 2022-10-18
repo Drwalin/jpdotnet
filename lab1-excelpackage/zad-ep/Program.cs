@@ -5,11 +5,36 @@ using Microsoft.Extensions.Configuration;
 using OfficeOpenXml;
 using OfficeOpenXml.Drawing;
 using OfficeOpenXml.Drawing.Chart;
+using OfficeOpenXml.Packaging.Ionic.Zip;
 using OfficeOpenXml.ThreadedComments;
 using zad_ep;
 
-string argumentPath = "../../..";
+foreach (var it in args)
+	Console.Out.WriteLine(it);
+
+if (args.Length < 2)
+{
+	Console.Out.WriteLine("Za mało argumentów do programu");
+	return;
+}
+
+string argumentPath = args[0];
+if (!Directory.Exists(argumentPath))
+{
+	Console.Out.WriteLine("Wskazana ścieżka nie istnieje");
+	return;
+}
 int arumentDepth = 3;
+if (!Int32.TryParse(args[1], out arumentDepth))
+{
+	Console.Out.WriteLine("Drugi argument powinien być liczbą pomiędzy 1 a 10000");
+	return;
+}
+if (arumentDepth < 1 || arumentDepth > 10000)
+{
+	Console.Out.WriteLine("Drugi argument powinien być liczbą pomiędzy 1 a 10000");
+	return;
+}
 
 List<FileInfo> sta = new List<FileInfo>();
 
@@ -47,7 +72,7 @@ int PrintDirectories(ExcelWorksheet ws, int x, int y, int depth, DirectoryInfo d
 }
 
 ExcelPackage.LicenseContext = LicenseContext.NonCommercial;
-FileInfo excelFile = new FileInfo("..\\..\\..\\lab.xlsx");
+FileInfo excelFile = new FileInfo("lab.xlsx");
 excelFile.Delete();
 using (var ep = new ExcelPackage(excelFile)) {
 	ep.Workbook.Properties.Title = "Tytuł";
@@ -70,32 +95,32 @@ using (var ep = new ExcelPackage(excelFile)) {
 		PrintFile(ws2, 1, i+1, sta[i]);
 	}
 
-		Dictionary<string, long> sizes = new Dictionary<string, long>();
-		Dictionary<string, long> counts = new Dictionary<string, long>();
+	Dictionary<string, long> sizes = new Dictionary<string, long>();
+	Dictionary<string, long> counts = new Dictionary<string, long>();
 
-		foreach (var e in sta)
-		{
-			if(sizes.TryAdd(e.Extension, 1) == false)
-				sizes[e.Extension] += e.Length;
-			if(counts.TryAdd(e.Extension, 1) == false)
-				counts[e.Extension] += 1;
-		}
+	foreach (var e in sta)
+	{
+		if(sizes.TryAdd(e.Extension, 1) == false)
+			sizes[e.Extension] += e.Length;
+		if(counts.TryAdd(e.Extension, 1) == false)
+			counts[e.Extension] += 1;
+	}
 
-		int j = 1;
-		foreach (var it in sizes)
-		{
-			ws2.Cells[j, 6].Value = it.Key;
-			ws2.Cells[j, 7].Value = it.Value;
-			j++;
-		}
-		
-		j = 1;
-		foreach (var it in counts)
-		{
-			ws2.Cells[j, 8].Value = it.Key;
-			ws2.Cells[j, 9].Value = it.Value;
-			j++;
-		}
+	int j = 1;
+	foreach (var it in sizes)
+	{
+		ws2.Cells[j, 6].Value = it.Key;
+		ws2.Cells[j, 7].Value = it.Value;
+		j++;
+	}
+	
+	j = 1;
+	foreach (var it in counts)
+	{
+		ws2.Cells[j, 8].Value = it.Key;
+		ws2.Cells[j, 9].Value = it.Value;
+		j++;
+	}
 	
 	{
 		var chart = ws2.Drawings.AddChart("PieChart", eChartType.Pie3D) as ExcelPieChart;
