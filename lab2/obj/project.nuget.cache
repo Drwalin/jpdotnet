@@ -1,0 +1,17 @@
+{
+  "version": 2,
+  "dgSpecHash": "lG750g/PTSfzFmIkr2N7LamKM4TBig0R+xOtLhuDDzZ8QXz7ZEnsT1XvXVaErvWi9JKGPLNu/vqCUCxpuKVbZQ==",
+  "success": true,
+  "projectFilePath": "C:\\studies\\jpdotnet\\lab\\lab2\\lab2.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\drwalin\\.nuget\\packages\\system.configuration.configurationmanager\\4.4.1\\system.configuration.configurationmanager.4.4.1.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\system.security.cryptography.protecteddata\\4.4.0\\system.security.cryptography.protecteddata.4.4.0.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.2\\system.threading.tasks.extensions.4.5.2.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\unity\\5.11.10\\unity.5.11.10.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\unity.abstractions\\5.11.2\\unity.abstractions.5.11.2.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\unity.configuration\\5.11.2\\unity.configuration.5.11.2.nupkg.sha512",
+    "C:\\Users\\drwalin\\.nuget\\packages\\unity.container\\5.11.5\\unity.container.5.11.5.nupkg.sha512"
+  ],
+  "logs": []
+}
