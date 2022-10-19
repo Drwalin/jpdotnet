@@ -15,7 +15,7 @@
   .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
   .ver 4:0:0:0
 }
-.assembly JPNET.Lab1
+.assembly 'jpdotnet.zad1msil.Normal.2'
 {
   .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
@@ -27,14 +27,14 @@
   .hash algorithm 0x00008004
   .ver 0:0:0:0
 }
-.module JPNET.Lab1.dll
-// MVID: {A656F0BB-8ABA-447D-81C0-EC19E5D10EDB}
+.module 'jpdotnet.zad1msil.Normal.2.dll'
+// MVID: {D0DDCDEB-3A1C-4AE6-A8D6-B96D3494787F}
 .imagebase 0x10000000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00000001    //  ILONLY
-// Image base: 0x06DE0000
+// Image base: 0x05000000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================
@@ -68,7 +68,7 @@
   .method public hidebysig instance void 
           MethodOfClassA() cil managed
   {
-    // Code size       61 (0x3d)
+    // Code size       53 (0x35)
     .maxstack  3
     .locals init (class [mscorlib]System.Reflection.Assembly V_0,
              class [System]System.Diagnostics.FileVersionInfo V_1,
@@ -91,26 +91,8 @@
                                                                 object,
                                                                 object)
     IL_0033:  stloc.2
-    IL_0034:  ldarg.0
-    IL_0035:  ldloc.2
-    IL_0036:  call       instance void JP_NET.Lab1.ClassA::PartialMethodOfClassA(object)
-    IL_003b:  nop
-    IL_003c:  ret
+    IL_0034:  ret
   } // end of method ClassA::MethodOfClassA
-
-  .method private hidebysig instance void 
-          PartialMethodOfClassA(object x) cil managed
-  {
-    // Code size       14 (0xe)
-    .maxstack  8
-    IL_0000:  nop
-    IL_0001:  ldstr      "Wydruk z klasy A. {0}"
-    IL_0006:  ldarg.1
-    IL_0007:  call       void [mscorlib]System.Console::WriteLine(string,
-                                                                  object)
-    IL_000c:  nop
-    IL_000d:  ret
-  } // end of method ClassA::PartialMethodOfClassA
 
   .method public hidebysig specialname rtspecialname 
           instance void  .ctor() cil managed
@@ -134,4 +116,4 @@
 // =============================================================
 
 // *********** DISASSEMBLY COMPLETE ***********************
-// WARNING: Created Win32 resource file Norm.res
+// WARNING: Created Win32 resource file Normal.2.res

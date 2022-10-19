@@ -15,26 +15,26 @@
   .publickeytoken = (B7 7A 5C 56 19 34 E0 89 )                         // .z\V.4..
   .ver 4:0:0:0
 }
-.assembly JPNET.Lab1.DEB
+.assembly 'jpdotnet.zad1msil.O.2'
 {
   .custom instance void [mscorlib]System.Runtime.CompilerServices.CompilationRelaxationsAttribute::.ctor(int32) = ( 01 00 08 00 00 00 00 00 ) 
   .custom instance void [mscorlib]System.Runtime.CompilerServices.RuntimeCompatibilityAttribute::.ctor() = ( 01 00 01 00 54 02 16 57 72 61 70 4E 6F 6E 45 78   // ....T..WrapNonEx
                                                                                                              63 65 70 74 69 6F 6E 54 68 72 6F 77 73 01 )       // ceptionThrows.
 
   // --- The following custom attribute is added automatically, do not uncomment -------
-  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 07 01 00 00 00 00 ) 
+  //  .custom instance void [mscorlib]System.Diagnostics.DebuggableAttribute::.ctor(valuetype [mscorlib]System.Diagnostics.DebuggableAttribute/DebuggingModes) = ( 01 00 02 00 00 00 00 00 ) 
 
   .hash algorithm 0x00008004
   .ver 0:0:0:0
 }
-.module JPNET.Lab1.DEB.dll
-// MVID: {9A0181D3-4CBE-4A31-AA4C-97A22C267E7C}
+.module 'jpdotnet.zad1msil.O.2.dll'
+// MVID: {3DCDB936-B6F4-403A-8FF6-E7DA27399506}
 .imagebase 0x10000000
 .file alignment 0x00000200
 .stackreserve 0x00100000
 .subsystem 0x0003       // WINDOWS_CUI
 .corflags 0x00000001    //  ILONLY
-// Image base: 0x06A70000
+// Image base: 0x06750000
 
 
 // =============== CLASS MEMBERS DECLARATION ===================
@@ -68,41 +68,35 @@
   .method public hidebysig instance void 
           MethodOfClassA() cil managed
   {
-    // Code size       53 (0x35)
+    // Code size       50 (0x32)
     .maxstack  3
-    .locals init ([0] class [mscorlib]System.Reflection.Assembly asm,
-             [1] class [System]System.Diagnostics.FileVersionInfo fvi,
-             [2] string x)
-    IL_0000:  nop
-    IL_0001:  call       class [mscorlib]System.Reflection.Assembly [mscorlib]System.Reflection.Assembly::GetExecutingAssembly()
-    IL_0006:  stloc.0
-    IL_0007:  ldloc.0
-    IL_0008:  callvirt   instance string [mscorlib]System.Reflection.Assembly::get_Location()
-    IL_000d:  call       class [System]System.Diagnostics.FileVersionInfo [System]System.Diagnostics.FileVersionInfo::GetVersionInfo(string)
-    IL_0012:  stloc.1
-    IL_0013:  ldstr      "{0}.{1}"
-    IL_0018:  ldloc.1
-    IL_0019:  callvirt   instance int32 [System]System.Diagnostics.FileVersionInfo::get_ProductMajorPart()
-    IL_001e:  box        [mscorlib]System.Int32
-    IL_0023:  ldloc.1
-    IL_0024:  callvirt   instance int32 [System]System.Diagnostics.FileVersionInfo::get_ProductMinorPart()
-    IL_0029:  box        [mscorlib]System.Int32
-    IL_002e:  call       string [mscorlib]System.String::Format(string,
+    .locals init (class [System]System.Diagnostics.FileVersionInfo V_0)
+    IL_0000:  call       class [mscorlib]System.Reflection.Assembly [mscorlib]System.Reflection.Assembly::GetExecutingAssembly()
+    IL_0005:  callvirt   instance string [mscorlib]System.Reflection.Assembly::get_Location()
+    IL_000a:  call       class [System]System.Diagnostics.FileVersionInfo [System]System.Diagnostics.FileVersionInfo::GetVersionInfo(string)
+    IL_000f:  stloc.0
+    IL_0010:  ldstr      "{0}.{1}"
+    IL_0015:  ldloc.0
+    IL_0016:  callvirt   instance int32 [System]System.Diagnostics.FileVersionInfo::get_ProductMajorPart()
+    IL_001b:  box        [mscorlib]System.Int32
+    IL_0020:  ldloc.0
+    IL_0021:  callvirt   instance int32 [System]System.Diagnostics.FileVersionInfo::get_ProductMinorPart()
+    IL_0026:  box        [mscorlib]System.Int32
+    IL_002b:  call       string [mscorlib]System.String::Format(string,
                                                                 object,
                                                                 object)
-    IL_0033:  stloc.2
-    IL_0034:  ret
+    IL_0030:  pop
+    IL_0031:  ret
   } // end of method ClassA::MethodOfClassA
 
   .method public hidebysig specialname rtspecialname 
           instance void  .ctor() cil managed
   {
-    // Code size       8 (0x8)
+    // Code size       7 (0x7)
     .maxstack  8
     IL_0000:  ldarg.0
     IL_0001:  call       instance void [mscorlib]System.Object::.ctor()
-    IL_0006:  nop
-    IL_0007:  ret
+    IL_0006:  ret
   } // end of method ClassA::.ctor
 
   .property instance int32 A()
@@ -116,4 +110,4 @@
 // =============================================================
 
 // *********** DISASSEMBLY COMPLETE ***********************
-// WARNING: Created Win32 resource file DEB.res
+// WARNING: Created Win32 resource file O.2.res
