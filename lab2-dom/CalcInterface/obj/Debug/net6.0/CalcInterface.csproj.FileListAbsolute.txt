@@ -1,0 +1,12 @@
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\bin\Debug\net6.0\CalcInterface.deps.json
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\bin\Debug\net6.0\CalcInterface.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\bin\Debug\net6.0\CalcInterface.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.csproj.AssemblyReference.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.GeneratedMSBuildEditorConfig.editorconfig
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.AssemblyInfoInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.AssemblyInfo.cs
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.csproj.CoreCompileInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\refint\CalcInterface.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\CalcInterface.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcInterface\obj\Debug\net6.0\ref\CalcInterface.dll

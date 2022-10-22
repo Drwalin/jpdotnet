@@ -1,0 +1,15 @@
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\bin\Debug\net6.0\CalcNumbers.deps.json
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\bin\Debug\net6.0\CalcNumbers.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\bin\Debug\net6.0\CalcNumbers.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.csproj.AssemblyReference.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.GeneratedMSBuildEditorConfig.editorconfig
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.AssemblyInfoInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.AssemblyInfo.cs
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.csproj.CoreCompileInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\refint\CalcNumbers.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\ref\CalcNumbers.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\bin\Debug\net6.0\CalcInterface.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\bin\Debug\net6.0\CalcInterface.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcNumbers\obj\Debug\net6.0\CalcNumbers.csproj.CopyComplete

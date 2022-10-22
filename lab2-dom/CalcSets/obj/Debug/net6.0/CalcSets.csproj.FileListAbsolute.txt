@@ -1,0 +1,15 @@
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\bin\Debug\net6.0\CalcSets.deps.json
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\bin\Debug\net6.0\CalcSets.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\bin\Debug\net6.0\CalcSets.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\bin\Debug\net6.0\CalcInterface.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\bin\Debug\net6.0\CalcInterface.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.csproj.AssemblyReference.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.GeneratedMSBuildEditorConfig.editorconfig
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.AssemblyInfoInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.AssemblyInfo.cs
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.csproj.CoreCompileInputs.cache
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.csproj.CopyComplete
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\refint\CalcSets.dll
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\CalcSets.pdb
+C:\studies\jpdotnet\lab\lab2-dom\CalcSets\obj\Debug\net6.0\ref\CalcSets.dll
