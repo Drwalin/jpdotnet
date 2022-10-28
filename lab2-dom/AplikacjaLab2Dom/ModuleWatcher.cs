@@ -15,20 +15,22 @@ public class ModuleWatcher {
 	public ModuleWatcher(MainWindow window, TabControl tabControl) {
 		this.window = window;
 		this.tabControl = tabControl;
-		
-		path = new DirectoryInfo(".").FullName + "\\Plugins";
+
+		LoadAppConfig();
 
 		var dir = new DirectoryInfo(path);
-		foreach(var it in dir.GetFiles()) {
-			if(it.Extension == ".dll") {
-				var tab = new Tab(window, tabControl, path,
-					Path.GetFileNameWithoutExtension(it.Name));
-				if(tab.calc != null) {
-					tabs.Add(it.Name, tab);
+		if(dir != null) {
+			foreach(var it in dir.GetFiles()) {
+				if(it.Extension == ".dll") {
+					var tab = new Tab(window, tabControl, path,
+						Path.GetFileNameWithoutExtension(it.Name));
+					if(tab.calc != null) {
+						tabs.Add(it.Name, tab);
+					}
 				}
 			}
 		}
-		
+
 		watcher = new FileSystemWatcher(path);
 		watcher.NotifyFilter = NotifyFilters.Attributes
 		                       | NotifyFilters.CreationTime
@@ -59,5 +61,20 @@ public class ModuleWatcher {
 		};
 		watcher.Filter = "*.dll";
 		watcher.EnableRaisingEvents = true;
+	}
+
+	void LoadAppConfig() {
+		path = new DirectoryInfo(".").FullName + "\\Plugins";
+		try {
+			FileInfo f = new FileInfo(".\\App.config");
+			if(f != null) {
+				string newPath = f.OpenText().ReadToEnd();
+				newPath = newPath.Trim();
+				if(Directory.Exists(newPath)) {
+					this.path = new DirectoryInfo(newPath).FullName;
+				}
+			}
+		} catch {
+		}
 	}
 }
