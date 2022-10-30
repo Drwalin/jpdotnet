@@ -9,5 +9,10 @@ public class Item {
 	public float price { get; set; }
 	public int amount { get; set; }
 	
-	public virtual ICollection<OrderOrInternetOrder> orders { get; set; }
+	public virtual ICollection<OrderOrInternetOrder> orders { get; set; } = new HashSet<OrderOrInternetOrder>();
+
+	public string ToString() {
+		return "Item{Id=" + Id + ", description=" + description + ", price="
+		       + price + ", amount=" + amount + ", orders.Count=" + orders.Count + "}";
+	}
 }

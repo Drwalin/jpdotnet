@@ -8,11 +8,11 @@ public class OrderOrInternetOrder {
 	public int Id { get; set; }
 	
 	[Required]
-	[ForeignKey("Client"), DatabaseGenerated(DatabaseGeneratedOption.None)]	
+	//[ForeignKey("Client"), DatabaseGenerated(DatabaseGeneratedOption.None)]	
 	public Client client{ get; set; }
 	
 	[Required]
-	[ForeignKey("Item"), DatabaseGenerated(DatabaseGeneratedOption.None)]	
+	//[ForeignKey("Item"), DatabaseGenerated(DatabaseGeneratedOption.None)]	
 	public Item item { get; set; }
 	
 	public bool finalized { get; set; }
@@ -22,10 +22,10 @@ public class OrderOrInternetOrder {
 
 	public string ToString() {
 		if(discriminatorIsInternetOrder) {
-			return "InternetOrder{Id=" + Id + "client=" + client.Id + ", item=" + item.Id
+			return "InternetOrder{Id=" + Id + ", client=" + client.Id + ", item=" + item.Id
 			       + ", finalized=" + finalized + ", ip=" + ip + "}";
 		} else {
-			return "Order{Id=" + Id + "client=" + client.Id + ", item=" + item.Id
+			return "Order{Id=" + Id + ", client=" + client.Id + ", item=" + item.Id
 			       + ", finalized=" + finalized + "}";
 		}
 	}

@@ -10,6 +10,23 @@ public class ClientMenu {
 		this.db = db;
 	}
 
+	public int BrowseClients() {
+		Util.ListSelect<Client>((int offset, int count) => db.clients.OrderBy(x => x.name).Skip(offset).Take(count)
+				.ToArray()
+		, (Client client) => client.ToString(), ()=>db.items.Count(), 5, "Browse clients",
+		(Client client) => {
+			chosenClient = client;
+			chosenIClient = null;
+			var ic = db.internetClients.Where(x => x.client.Equals(client))
+				.Take(1)
+				.ToArray();
+			if(ic?.Length > 0) {
+				chosenIClient = ic[0];
+			}
+			return true;
+		});
+		return 0;
+	}
 
 	public int ChooseClient() {
 		string filter = "";
@@ -109,12 +126,13 @@ public class ClientMenu {
 			Menu<int> menu = new Menu<int>(true);
 
 			menu.AddOption(ConsoleKey.D1, "Choose client", ChooseClient);
-			menu.AddOption(ConsoleKey.D2, "Add client", CreateClient);
+			menu.AddOption(ConsoleKey.D2, "Browse clients", BrowseClients);
+			menu.AddOption(ConsoleKey.D3, "Add client", CreateClient);
 			if(chosenClient != null) {
-				menu.AddOption(ConsoleKey.D3, "Finalize orders", () => {
+				menu.AddOption(ConsoleKey.D4, "Finalize orders", () => {
 					return new OrderMenu(db, this).FinalizeOrders();
 				});
-				menu.AddOption(ConsoleKey.D4, "Create order", () => {
+				menu.AddOption(ConsoleKey.D5, "Create order", () => {
 					return new OrderMenu(db, this).CreateOrder();
 				});
 			}
@@ -122,6 +140,8 @@ public class ClientMenu {
 				run = false;
 				return 0;
 			});
+			
+			menu.SetDescription("Choosen client: " + GetChosenClientString());
 
 			menu.Run();
 		};

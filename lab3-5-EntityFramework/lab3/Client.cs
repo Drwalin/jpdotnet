@@ -10,11 +10,11 @@ public class Client {
 	public string name { get; set; }
 	public string address { get; set; }
 
-	public ICollection<OrderOrInternetOrder> orders { get; set; }
+	public virtual ICollection<OrderOrInternetOrder> orders { get; set; } = new HashSet<OrderOrInternetOrder>();
 
 
 	public string ToString() {
-		return "Client{Id=" + Id + "name=" + name + ", address=" + address + "}";
+		return "Client{Id=" + Id + ", name=" + name + ", address=" + address + ", orders.Count=" + orders.Count + "}";
 	}
 
 	public float Count() {

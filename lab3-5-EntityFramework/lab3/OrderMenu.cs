@@ -21,7 +21,9 @@ public class OrderMenu {
 				.ToArray()
 		, item => item.ToString(), ()=>db.items.Count(), 10, "Choose orders to finalize",
 		order => {
-			
+			using(var trans = db.Database.BeginTransaction()) {
+				throw new Exception("Zrobienie transakcji");
+			}
 			return false;
 		});
 		return 0;

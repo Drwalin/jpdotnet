@@ -26,7 +26,7 @@ public class ItemMenu {
 
 	public int Menu() {
 		Util.ListSelect<Item>((int offset, int count) => db.items.OrderBy(x => x.description).Skip(offset).Take(count)
-				.ToArray(), (Item Item) => Item.ToString(), ()=>db.items.Count(), 5, "Select an item",
+				.ToArray(), (Item item) => item.ToString(), ()=>db.items.Count(), 5, "Select an item",
 			(Item item) => {
 				SingleItemMenu(item);
 				return false;
@@ -45,26 +45,29 @@ public class ItemMenu {
 			menu.AddOption(ConsoleKey.D2, "Add item amount", () => {
 				return EditItemAmount(item);
 			});
-			menu.AddOption(ConsoleKey.D3, "Browse clients by item",
-				BrowseClientsByItem);
+			menu.AddOption(ConsoleKey.D3, "Browse clients by item", () => {
+				return BrowseClientsByItem(item);
+			});
 
 			menu.AddOption(ConsoleKey.Q, "Return", () => {
 				run = false;
 				return 0;
 			});
+			
+			menu.SetDescription(item.ToString());
 
 			menu.Run();
 		}
 	}
 	private int EditItemPrice(Item item) {
-		Console.WriteLine("Item: " + item);
+		Console.WriteLine("Item: " + item.ToString());
 		item.price = Util.ReadFloat("New item price");
 		return 0;
 	}
 
 	private int EditItemAmount(Item item) {
 		while(true) {
-			int amount = Util.ReadInt("How much items to add to: " + item);
+			int amount = Util.ReadInt("How much items to add to: " + item.ToString());
 			if(amount < 0) {
 				Console.WriteLine("Amount must not be less than 0");
 			} else {
@@ -75,13 +78,25 @@ public class ItemMenu {
 		}
 	}
 
-	private int BrowseClientsByItem() {
-		
+	private int BrowseClientsByItem(Item item) {
+		var f = () => {
+			HashSet<Client> cls = new();
+			foreach(var order in item.orders) {
+				cls.Add(order.client);
+			}
+			return cls;
+		};
+		Util.ListSelect<Client>((int offset, int count) => {
+				return f().OrderBy(x => x.name).Skip(offset).Take(count)
+					.ToArray();
+			}
+		, (Client client) => client.ToString(), ()=>f().Count(), 5, "Browse clients by " + item.ToString());
+		return 0;
 	}
 
 	public Item SelectItem(string text) {
 		return Util.ListSelect<Item>((int offset, int count) => db.items.OrderBy(x => x.description).Skip(offset).Take(count)
 				.ToArray()
-		, (Item Item) => Item.ToString(), ()=>db.items.Count(), 5, text);
+		, (Item item) => item.ToString(), ()=>db.items.Count(), 5, text);
 	}
 }

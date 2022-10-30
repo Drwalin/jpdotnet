@@ -33,7 +33,7 @@ public class Menu<Ret> {
 
 			if(printed == false) {
 				foreach(var it in options) {
-					Console.WriteLine("" + it.key + ", " + it.name);
+					Console.WriteLine("" + it.key + ": " + it.name);
 				}
 			}
 			

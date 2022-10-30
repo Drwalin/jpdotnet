@@ -20,14 +20,15 @@ partial class main {
 
 		db.Database.AutoTransactionBehavior = AutoTransactionBehavior.Always;
 
-		Item item = new Item();
+		Item item = new Item() {description="Opis", price=123.0f, amount=4};
 		Client client = new Client() { address = "address", name = "Zerowy" };
-		OrderOrInternetOrder order = new OrderOrInternetOrder() { item=item, client=client, discriminatorIsInternetOrder = true, finalized = false, ip="1.2.3.4"};
 		db.Add(item);
 		db.Add(client);
+		OrderOrInternetOrder order = new OrderOrInternetOrder() { item=item, client=client, discriminatorIsInternetOrder = true, finalized = false, ip="1.2.3.4"};
 		db.Add(order);
+
+		item.amount = 666;
 		
-		/*
 		db.Add(new Client() { address = "", name = "Drugi" });
 		db.Add(new Client() { address = "", name = "Trzeci" });
 		db.Add(new Client() { address = "", name = "Czwarty" });
@@ -43,7 +44,16 @@ partial class main {
 		db.Add(new Client() { address = "", name = "DwodzestySiodmy" });
 		db.Add(new Client() { address = "", name = "DwodzestOsmyy" });
 		db.Add(new Client() { address = "", name = "DwodzestyCzwart" });
-		*/
+
+
+		for(int i = 0; i < 15; ++i) {
+			db.Add(new Item() {
+				description = "Opis_" + Random.Shared.Next(0, 10),
+				price = 123.0f, amount = Random.Shared.Next(0, 10)
+			});
+		}
+
+
 		db.SaveChanges();
 
 		MainLoop();

@@ -11,6 +11,6 @@ public class InternetClient {
 	public string ip { get; set; }
 
 	public string ToString() {
-		return "Client{Id=" + Id + "name=" + client.name + ", address=" + client.address + ", ip=" + ip + "}";
+		return "Client{Id=" + Id + ", name=" + client.name + ", address=" + client.address + ", orders.Count=" + client.orders.Count + ", ip=" + ip + "}";
 	}
 }

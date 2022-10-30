@@ -33,7 +33,7 @@ public class Util {
 
 	public static T ListSelect<T>(Func<int, int, T[]> select,
 		Func<T, string> toString, Func<int> count, int pageSize,
-		string header, Func<T, bool> finalizeSelect = null) where T : class {
+		string header, Func<T, bool>? finalizeSelect = null) where T : class {
 		int page = 0;
 		int all = count();
 		int maxPage = ((all + pageSize - 1) / pageSize);
@@ -45,7 +45,8 @@ public class Util {
 				Console.WriteLine("" + i + ": " + toString(objects[i]));
 			}
 
-			Console.WriteLine("Page: " + page + " / " + maxPage);
+			Console.WriteLine("Page: " + (page+1) + " / " + maxPage);
+			Console.WriteLine("Found: " + all);
 			Console.WriteLine("Press 0-9 to select element");
 			Console.WriteLine("Press enter to select none");
 			Console.WriteLine("Press n/p to go to next/previous page");
@@ -53,9 +54,7 @@ public class Util {
 			ConsoleKeyInfo key = Console.ReadKey();
 			if(key.KeyChar >= '0' && key.KeyChar <= '9') {
 				int id = key.KeyChar - '0';
-				if(id >= objects.Length) {
-					continue;
-				} else {
+				if(id < objects.Length) {
 					if(finalizeSelect != null) {
 						if(finalizeSelect(objects[id])) {
 							return objects[id];
@@ -67,10 +66,10 @@ public class Util {
 			} else {
 				switch(key.Key) {
 					case ConsoleKey.N:
-						page = Math.Clamp(page + 1, 0, maxPage);
+						page = Math.Clamp(page + 1, 0, maxPage-1);
 						break;
 					case ConsoleKey.P:
-						page = Math.Clamp(page - 1, 0, maxPage);
+						page = Math.Clamp(page - 1, 0, maxPage-1);
 						break;
 					case ConsoleKey.Q:
 						return null;
