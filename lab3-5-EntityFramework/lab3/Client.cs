@@ -1,4 +1,5 @@
 ﻿using System.ComponentModel.DataAnnotations;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace lab;
 
@@ -9,7 +10,8 @@ public class Client {
 	public string name { get; set; }
 	public string address { get; set; }
 
-	public virtual ICollection<OrderOrInternetOrder> orders { get; set; }
+	public ICollection<OrderOrInternetOrder> orders { get; set; }
+
 
 	public string ToString() {
 		return "Client{Id=" + Id + "name=" + name + ", address=" + address + "}";
