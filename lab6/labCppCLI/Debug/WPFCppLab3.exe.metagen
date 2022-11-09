@@ -1,0 +1,50 @@
+ImageRuntimeVersion: v4.0.30319
+Assembly WPFCppLab3, Version=0.0.*, Culture=Invariant Language (Invariant Country): 
+	hash=SHA1, flags=PublicKey
+Assembly mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly PresentationCore, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly PresentationFramework, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Assembly System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089: 
+	hash=None, flags=None
+Assembly WindowsBase, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35: 
+	hash=None, flags=None
+Class MyApplication: AutoLayout, AnsiClass, Class, Public, BeforeFieldInit
+  :System.Windows.Application
+    Void .ctor(System.Windows.Window): PrivateScope, Public, HideBySig, SpecialName, RTSpecialName
+  Fields:
+    DataModel h_dm : Public
+    System.Windows.Documents.TextRange textRang : Public
+    System.String pathToVBCode : Public
+    System.String code : Public
+    System.String tekst : Public
+    System.String st : Public
+    System.Windows.Controls.Button addBtn : Public
+    System.Windows.Controls.Button invokeBtn : Public
+    System.Windows.Controls.Button setBtn : Public
+    System.Windows.Controls.RichTextBox codeRTB : Public
+    System.Windows.Controls.ListBox errorsListBox : Public
+    System.Windows.Controls.ListBox methodsListBox : Public
+    System.Windows.Controls.ListBox variablesListBox : Public
+    System.Reflection.Assembly modul : Public
+    System.Type t : Public
+    System.Object obj : Public
+    System.Runtime.Remoting.ObjectHandle handle : Public
+    System.Reflection.FieldInfo[] fields : Public
+    System.Reflection.MethodInfo mI : Public
+    System.Reflection.FieldInfo fI : Public
+    System.Windows.Controls.TextBox resultTextBox : Public
+    System.Windows.Controls.TextBox parameterTextBox : Public
+    System.Windows.Controls.TextBox setTextBox : Public
+    System.Windows.Controls.TextBox setTextBox2 : Public
+    System.Windows.Controls.ComboBox checkZoneComboBox : Public
+    System.Reflection.FieldInfo variable : Public
+    System.Object instance : Public
+  Methods:
+    OnSelectionMethodsListBoxChanged(Object, SelectionChangedEventArgs): PrivateScope, Public, HideBySig
+    OnSelectionVariablesListBoxChanged(Object, SelectionChangedEventArgs): PrivateScope, Public, HideBySig
+    OninvokeBtnClick(Object, RoutedEventArgs): PrivateScope, Public, HideBySig
+    OnsetBtnClick(Object, RoutedEventArgs): PrivateScope, Public, HideBySig
+    OnAddBtnClick(Object, RoutedEventArgs): PrivateScope, Public, HideBySig

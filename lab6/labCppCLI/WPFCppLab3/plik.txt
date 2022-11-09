@@ -1,0 +1,1 @@
+Successful file saving and reading plik.txt file.

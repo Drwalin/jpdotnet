@@ -1,0 +1,2 @@
+C:\studies\jpdotnet\lab\lab6\labCppCLI\WPFCppLab3\Debug\WPFCppLab3.vcxproj.AssemblyReference.cache
+C:\studies\jpdotnet\lab\lab6\labCppCLI\WPFCppLab3\Debug\WPFCppLab3.vcxproj.SuggestedBindingRedirects.cache

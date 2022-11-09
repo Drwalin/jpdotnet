@@ -1,0 +1,12 @@
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\bin\Debug\VBCode.exe.config
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\bin\Debug\VBCode.exe
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\bin\Debug\VBCode.pdb
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\bin\Debug\VBCode.xml
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.vbproj.AssemblyReference.cache
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.vbproj.SuggestedBindingRedirects.cache
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.Resources.resources
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.vbproj.GenerateResource.cache
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.vbproj.CoreCompileInputs.cache
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.exe
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.xml
+C:\studies\jpdotnet\lab\lab6\labCppCLI\VBCode\obj\Debug\VBCode.pdb
